@@ -67,70 +67,70 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 
 ![AWS Signin](/images/3-1-ec2-static-site/1_awssignin.png)  
 ### 2. Ensure you're in the right AWS region
-2.1. On the top-right side, make sure you select __***Sydney***__.  
+2.1. On the top-right side, make sure you select ***Sydney***.  
 
 ![AWS Signin](/images/3-1-ec2-static-site/region.png)  
 
 ### 3. Create CodeStar Project
 
-3.1.  Under the AWS services search field, search for __***codestar***__, and click on the CodeStar auto drop down element  
+3.1.  Under the AWS services search field, search for ***codestar***, and click on the CodeStar auto drop down element  
 
-3.2. Click on the '+ Create a new project' link  
+3.2. Click on the ***'+ Create a new project'*** link  
 
 ![CodeStar Create Project](/images/3-1-ec2-static-site/2_createcodestarproj.png)  
-3.3. On the left hand side, under Application Category, select __***Static Website***__  
+3.3. On the left hand side, under Application Category, select ***Static Website***  
 
-3.4. Under __***Choose a project template***__, click on 'HTML - Static Website - Amazon EC2'  
+3.4. Under ***Choose a project template***, click on 'HTML - Static Website - Amazon EC2'  
 
-3.5. Under the __***Project name***__ field enter your first name, and last name without a space. For example __***sallytran__  
+3.5. Under the ***Project name*** field enter your first name, and last name without a space. For example ***sallytran***  
 
-3.6. Select __***AWS CodeCommit__ as your source code repository  
+3.6. Select ***AWS CodeCommit*** as your source code repository  
 
-3.7. Under the __***Repository name***__ field, enter the same value you did in step 3.5. I.e. __***firstnamelastname***__  
+3.7. Under the ***Repository name*** field, enter the same value you did in step 3.5. I.e. ***firstnamelastname***  
 
-3.8. Click the __***Next***__ button  
+3.8. Click the ***Next*** button  
 
 ![CodeStar Project Name](/images/3-1-ec2-static-site/3_projectname.png)  
 
-3.9.1. On the __***Review project details***__ page, click the __***Edit Amazon EC2 Confirguration link***__. Choose the VPC id, and subnet that has been supplied to you. Choose a t2.micro instance.  
+3.9.1. On the ***Review project details*** page, click the ***Edit Amazon EC2 Confirguration link***. Choose the VPC id, and subnet that has been supplied to you. Choose a t2.micro instance.  
 
 ![Edit EC2 Options](/images/3-1-ec2-static-site/5_editec2options.png)  
 
-3.9.2. On the __***Review project details***__ page, observe the AWS tools that will be utilisied and connected by CodeStar. In this case you should see that:
+3.9.2. On the ***Review project details*** page, observe the AWS tools that will be utilisied and connected by CodeStar. In this case you should see that:
 
 - CodeCommit is being for Source Control Management
 - CodeDeploy is being used for Application Deployment, and
 - CloudWatch is being used for Monitoring
 
-3.10. Click on the __***Create Project***__ button  
+3.10. Click on the ***Create Project*** button  
 
 ![Review Project](/images/3-1-ec2-static-site/4_reviewproject.png)  
 
-3.11. When you see the __***Choose an Amazon EC2 Key Pair***__, select __***devops_girls***__ from the dropdown list, tick the acknowledgement box, and click the __***Create Project***__ button (Normally you would make very sure you have access to this key in case you ever needed access to the EC2 instance)  
+3.11. When you see the ***Choose an Amazon EC2 Key Pair***, select ***devops_girls*** from the dropdown list, tick the acknowledgement box, and click the ***Create Project*** button (Normally you would make very sure you have access to this key in case you ever needed access to the EC2 instance)  
 
 ![Choose EC2 Key](/images/3-1-ec2-static-site/6_chooseec2key.png)  
 
-3.12. On the __***It looks like this is your first time here.***__ screen, enter your name in the __***Display Name***__ field, and an accessible email address in the __***Email__ field  
+3.12. On the ***It looks like this is your first time here.*** screen, enter your name in the ***Display Name*** field, and an accessible email address in the ***Email*** field  
 
-3.13 On the __***Pick how you want to edit your code***__ choose __***Command line tools***__ and click the __***See instructions***__ link 
+3.13 On the ***Pick how you want to edit your code*** choose ***Command line tools*** and click the ***See instructions*** link 
 
 ![Pick your tools](/images/3-1-ec2-static-site/7_picktools.png)   
 
-3.14 On the __***Connect to your tools***__, choose the Operating System that applies to you. For example Windows  
+3.14 On the ***Connect to your tools***, choose the Operating System that applies to you. For example Windows  
 
-3.15 Choose __***HTTPS***__ as the Connection Method  
+3.15 Choose ***HTTPS*** as the Connection Method  
 
-3.16. Right click on the Generate Git Credentials __***here***__ link and open the link in a new browser tab  
+3.16. Right click on the Generate Git Credentials ***here*** link and open the link in a new browser tab  
 
 ![Connect your tools](/images/3-1-ec2-static-site/8_connecttools.png)  
 
-3.17. Under the __***HTTPS Git credentials for AWS CodeCommit***__ click the Generate button. Save your login details somewhere securely such as Keepass. For the purposes of this exercise, a text file will be okay  
+3.17. Under the ***HTTPS Git credentials for AWS CodeCommit*** click the Generate button. Save your login details somewhere securely such as Keepass. For the purposes of this exercise, a text file will be okay  
 
 ![Generate CodeCommit HTTPS Credentials](/images/3-1-ec2-static-site/9_generategitcreds.png)  
 
 ![CodeCommit HTTPS Credentials](/images/3-1-ec2-static-site/10_gitcredscreated.png) 
 
-3.18. Go back to your other browser tab, and click the __***copy***__ link next to the CodeCommit repository URL  
+3.18. Go back to your other browser tab, and click the ***copy*** link next to the CodeCommit repository URL  
 
 3.19. Open up a command line terminal and navigate to a directory where you wish to clone the new repository into  
 
@@ -140,9 +140,9 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 
 ![git clone](/images/3-1-ec2-static-site/gitclone.png)
 
-3.22. Click the __***Back***__ button on the AWS Choose your tools page  
+3.22. Click the ***Back*** button on the AWS Choose your tools page  
 
-3.23. On the __***Pick how you want to edit your code***__, press the __***Skip***__ button  
+3.23. On the ***Pick how you want to edit your code***, press the ***Skip*** button  
 
 3.24. Now CodeStar will start deploying your website via CodeDeploy  
 
@@ -158,7 +158,7 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 
 4.1. Open your web browser and paste in the following URL, https://s3-ap-southeast-2.amazonaws.com/devopsgirls1/index.html  
 
-4.2. Click on the new tab, then right click anywhere on the webpage and select __***Save as...***__  
+4.2. Click on the new tab, then right click anywhere on the webpage and select ***Save as...***  
 
 4.3. Change thje filename to be index.html and save it in the webpage directory of your cloned git project repository on your workstation. For example, sallytran/webpage/index.html  
 
