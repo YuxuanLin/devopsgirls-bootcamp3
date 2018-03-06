@@ -1,22 +1,27 @@
 # Deploy a static website to EC2 using CodeStar
 
 ## Learning Aims
+
 ### 1. Introduction to Continuous Integration, Delivery, and Deployment
+
 ### 2. Introduction to AWS CodeStar, CodeCommit, and CodeDeploy
 
 ## Key concepts
+
 - "*Continuous Integration*  is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible." - Martin Fowler, Chief Scientist, ThoughtWorks.
 - "*Continuous Delivery* is the natural extension of Continuous Integration, an approach in which teams ensure that every change to the system is releasable, and release any version with the push of a button. Continuous Delivery aims to make releases boring, so that we can deliver frequently and get quick feedback on what users care about." - Thoughtworks.
 - "*Continuous Deployment* is the next step of continuous delivery: Every change that passes the automated tests is deployed to production automatically. Continuous deployment should be the goal of most companies that are not constrained by regulatory or other requirements." - Puppet Labs
 
 ## Key technologies used
-- AWS CodeStar: https://aws.amazon.com/codestar/
-- AWS EC2: https://aws.amazon.com/ec2/
-- AWS CodeCommit: https://aws.amazon.com/codecommit/
-- AWS Code: https://aws.amazon.com/codedeploy/
-- Git: https://git-scm.com/
+
+- AWS CodeStar: <https://aws.amazon.com/codestar/>
+- AWS EC2: <https://aws.amazon.com/ec2/>
+- AWS CodeCommit: <https://aws.amazon.com/codecommit/>
+- AWS Code: <https://aws.amazon.com/codedeploy/>
+- Git: <https://git-scm.com/>
 
 ## Module Overview
+
 - Setup and a deploy a new static website project in AWS CodeStar
 - Download static files from an AWS S3 bucket. These files will be used to customise the static website
 - Commit and push downloaded static files to CodeCommit repository using Git
@@ -26,7 +31,9 @@
 ![Git to EC2](/images/3-1-ec2-static-site/CCtoEC2.svg) 
 
 ## Prerequisites
+
 You will need the following software installed on your workstation:  
+
 - [Git client](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 **How to Install Git Client**
@@ -50,10 +57,12 @@ git --version
 
 **Note**: If you would like to know more about how to use git [here you are a book's link](https://git-scm.com/book/en/v2) to understand everything about **git**. Enjoy it ;)!
 
-Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or [Visual Studio Code](https://code.visualstudio.com/download). 
+Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or [Visual Studio Code](https://code.visualstudio.com/download).  
 
 ## You'll be a CodeStar in no time
+
 ### 1. Log in to AWS
+
 1.1. Open a web browser and go to https://xxxxxx.signin.aws.amazon.com/console. Log in using your supplied account credentials.  
 
 ![AWS Signin](/images/3-1-ec2-static-site/1_awssignin.png)  
@@ -61,7 +70,9 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 2.1. On the top-right side, make sure you select __***Sydney***__.  
 
 ![AWS Signin](/images/3-1-ec2-static-site/region.png)  
+
 ### 3. Create CodeStar Project
+
 3.1.  Under the AWS services search field, search for __***codestar***__, and click on the CodeStar auto drop down element  
 
 3.2. Click on the '+ Create a new project' link  
@@ -86,9 +97,10 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 ![Edit EC2 Options](/images/3-1-ec2-static-site/5_editec2options.png)  
 
 3.9.2. On the __***Review project details***__ page, observe the AWS tools that will be utilisied and connected by CodeStar. In this case you should see that:
-* CodeCommit is being for Source Control Management
-* CodeDeploy is being used for Application Deployment, and
-* CloudWatch is being used for Monitoring
+
+- CodeCommit is being for Source Control Management
+- CodeDeploy is being used for Application Deployment, and
+- CloudWatch is being used for Monitoring
 
 3.10. Click on the __***Create Project***__ button  
 
@@ -143,6 +155,7 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 ![CodeDeploy in action](/images/3-1-ec2-static-site/13_codedeploy.png)
 
 ### 4. Download custom static HTML file from AWS S3
+
 4.1. Open your web browser and paste in the following URL, https://s3-ap-southeast-2.amazonaws.com/devopsgirls1/index.html  
 
 4.2. Click on the new tab, then right click anywhere on the webpage and select __***Save as...***__  
@@ -152,6 +165,7 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 ![Save index.html file](/images/3-1-ec2-static-site/11_saveindex.png)
 
 ### 5. Push changes to CodeCommit Repo
+
 5.1. In your command terminal, navigate to the home (root) directory of your CodeCommit repository on your workstation. For example:
 `cd C:\sallytran`  
 
@@ -177,8 +191,3 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 6.3. Right click on the endpoint URL, and open the link in a new tab. You will see your newly customised website has been deployed to the cloud!
 
 ![CodeDeploy](/images/3-1-ec2-static-site/13_codedeploy.png)
-
-
-
-
-
