@@ -80,7 +80,7 @@ Also you will need a **Text editor** such as [Sublime](www.sublimetext.com/3) or
 ![CodeStar Create Project](/images/3-1-ec2-static-site/2_createcodestarproj.png)  
 3.3. On the left hand side, under Application Category, select ***Static Website***  
 
-3.4. Under ***Choose a project template***, click on 'HTML - Static Website - Amazon EC2'  
+3.4. Under ***Choose a project template***, click on ***'HTML - Static Website - Amazon EC2'***  
 
 3.5. Under the ***Project name*** field enter your first name, and last name without a space. For example ***sallytran***  
 
